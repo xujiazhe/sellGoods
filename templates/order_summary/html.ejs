@@ -1,0 +1,25 @@
+<div class="media-body">
+    <!--var a = {
+    "_id": "57098ffe5dd7b3d214262bdb",
+    "ip": "北京北京",
+    "action": "save",
+    "id": "184",
+    "orderno": "O-201641072710",
+    "title": "AIR MAX90",
+    "mobile": "18710134910",
+    "address": "beijing",
+    "count": "1",
+    "size": "-尺码36-数量:",
+    "color": "黑色",
+    "gbook": "test"
+    }-->
+    <p><span>收件人: </span> <%= order.username %> </p>
+    <p><span>手机: </span> <%= order.mobile %> </p>
+    <p><span>地址: </span> <%= order.address %> </p>
+    <p><span>大小: </span> <%= order.size %> </p>
+    <p><span>颜色: </span> <%= order.color %> </p>
+    <p><span>留言: </span> <%= order.gbook %> </p>
+    <p><span>下单时间: </span> <%= order.date %> </p>
+    <p><span>下单省份: </span> <%= order.ip %> </p>
+    <p><span>产品id: </span> <%= order.id %> </p>
+</div>

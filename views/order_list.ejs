@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>订单列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" >
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="320" name="MobileOptimized">
+    <meta content="telephone=no" name="format-detection"> 
+    <link rel="apple-touch-icon" href="">
+      
+    <link rel="stylesheet" href="lib/ratchet/css/ratchet.css">
+    <link rel="stylesheet" href="lib/ratchet/css/ratchet-theme-ios.css">
+    <link rel="stylesheet" href="stylesheets/orderlist.css">
+  </head>
+  <body>
+    <header class="bar bar-nav">
+      <h1 class="title">订单列表</h1>
+    </header>
+
+    <div class="content">
+      <ul class="table-view">
+
+      <% for(var i=0; i<orders.length; i++) {%>
+        <% if(orders[i].date_split) { %>
+          <li class="table-view-cell table-view-divider">日期 <%= orders[i].date_split  %></li>
+        <% } %>
+        <li class="table-view-cell media">
+          <a class="" href="#" data-transition="slide-in">
+            <!--<img class="media-object pull-left" src="http://placehold.it/64x64" alt="Placeholder image for Argo's poster">-->
+            <%- include('../templates/order_summary/html.ejs', {order: orders[i]} ); %> 
+          </a>
+        </li>
+      <% } %>
+      </ul>
+    </div><!-- /.content -->
+
+  </body>
+</html>
